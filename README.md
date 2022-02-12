@@ -25,7 +25,9 @@ First we create an EC2 instance that will serve as our web server and create 3 v
 
 We will put 10 GB on each volume. To do that we click on "Volumes" under "Elastic Block Store":
 
-![volumes4](./images/volumes7.png)
+![volumes](./images/volumes7.png)
+
+![volumes4](./images/volumes2.png)
 
 We create 3 volumes of 10 GB each:
 
@@ -297,7 +299,7 @@ We update our /etc/fstab using our "database--vg" and "database-lv" UUID:
 
 ![uuid-db](./images/uuid-db.png)
 
-We test the configuration and reload the daemon:
+We test the configuration and reload daemon:
 
 `sudo mount -a`
 
