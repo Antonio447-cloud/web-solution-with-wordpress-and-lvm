@@ -6,6 +6,8 @@
  
 https://github.com/Antonio447-cloud/MEAN-stack-angular
 
+    Happy learning!
+-----------
 ## Outline
     
 In this project we will prepare a storage infrastructure on two Linux servers and implement a basic web solution using WordPress. The WordPress management system will be written in PHP and paired with MySQL or MariaDB as its backend Relational Database Management System (RDBMS)
@@ -17,8 +19,6 @@ This project consists of two parts:
 - Installing WordPress and connecting it to a remote MySQL database server.
 ----------
 
-    Happy learning!
-
 ## Preparing your Web Server and Creating its Volumes
 
 So first we will create 2 volumes for our 2 web server's instances. Both in the same Availablity Zone (AZ) as our web server EC2 instance. You can configure the AZ when you are launching your instance by clicking on "Subnet" and selecting your preferred AZ:
@@ -27,7 +27,7 @@ So first we will create 2 volumes for our 2 web server's instances. Both in the 
 
 We will put 10 GB on each volume. To do that we click on "Volumes" we can find it under "Elastic Block Store":
 
-![volumes4](./images/volumes2.png)
+![volumes4](./images/volumes7.png)
 
 Then we create 3 volumes of 10 GB each. So, first we click on "Create volume" located on the top right corner:
 
