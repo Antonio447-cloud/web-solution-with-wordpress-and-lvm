@@ -21,25 +21,31 @@ This project consists of two parts:
 
 ## Preparing your Web Server and Creating its Volumes
 
-First we create an EC2 instance that will serve as our web server and create 3 volumes, in the same Availablity Zone (AZ) as our web server EC2 instance. You can configure the AZ when you are launching your instance:
+So first we will create 2 volumes for our 2 web server's instances. Both in the same Availablity Zone (AZ) as our web server EC2 instance. You can configure the AZ when you are launching your instance by clicking on "Subnet" and selecting your preferred AZ:
 
-We will put 10 GB on each volume. To do that we click on "Volumes" under "Elastic Block Store":
+![configure-az](./images/configure-az4.png)
 
-![volumes](./images/volumes7.png)
+We will put 10 GB on each volume. To do that we click on "Volumes" we can find it under "Elastic Block Store":
 
 ![volumes4](./images/volumes2.png)
 
-We create 3 volumes of 10 GB each:
+Then we create 3 volumes of 10 GB each. So, first we click on "Create volume" located on the top right corner:
+
+![create](./images/create-volume8.png)
+
+Then we make sure the volume is in the same AZ as our instance and we input "10" on "Size (GiB)":
 
 ![create-volume](./images/create-volume.png)
 
 ## Attaching the Volumes to your Web Servers
 
-After creating each of the volumes for our web servers, we need to attach each of the 3 web servers to each of the 3 volumes we have just created. Keep in mind that the 3 volumes and your web servers will need to be on the same Availability Zone (AZ). We can configure this by clicking on "Subnet" and selecting the AZ that we want when launching our instance:
+After creating each of the volumes for our 3 web servers, we need to attach each of the 3 web servers to each of the 3 volumes we have just created. Keep in mind that the 3 volumes and your web servers will need to be on the same Availability Zone (AZ). We can configure this by clicking on "Subnet" and selecting the AZ that we want when launching our instance:
 
-![configure-az](./images/configure-az.png)
+![configure-az](./images/configure-az4.png)
 
-Now, we connect to our web servers and attach each of the three volumes to each of them. To do so we select the volume that we want to attach to our web server then we click on "Actions" and then "Attach". 
+Now, we need to attach each of the 3 volumes to each of of our 3 web servers. To do so we select the volume that we want to attach to our web server then we click on "Actions" and then "Attach":
+
+![attach](./images/actions-attach2.png)
 
 After confirming that the instance we want to attach is on the same AZ as the volume, we click on the drop down menu that is listed under "Instance" then we type the name of our instance, then we click on "Attach volume":
 
@@ -47,7 +53,7 @@ After confirming that the instance we want to attach is on the same AZ as the vo
 
 We repeat this process with each of our 3 web servers:
 
-![volumes](./images/volumes.png)
+![volumes](./images/volumes4.png)
 
 Now, we run `lsblk` to confirm that our block devices are attached to our web server:
 
@@ -211,11 +217,11 @@ Then we copy both the apps--lv and logs--lv UUID and we run:
 
 `sudo vi /etc/fstab`
 
-Then we paste both UUIDs on our /etc/fstab.
-
-**NOTE**: *Remember to remove the leading and ending quotes of each of the "apps-lv" and "logs-lv" UUIDs when adding them to the /etc/fstab file. We use the following format:*
+We paste both UUIDs on our /etc/fstab using the following format:
 
 ![uuid-changed](./images/uuid-changed.png)
+
+**NOTE**: *Remember to remove the leading and ending quotes of each of the "apps-lv" and "logs-lv" UUIDs when adding them to the /etc/fstab file.*
 
 We test the configuration and reload daemon:
 
