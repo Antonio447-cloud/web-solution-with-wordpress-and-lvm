@@ -6,18 +6,18 @@
  
 https://github.com/Antonio447-cloud/MEAN-stack-angular
 
-    Happy learning!
------------
 ## Outline
     
 In this project we will prepare a storage infrastructure on two Linux servers and implement a basic web solution using WordPress. The WordPress management system will be written in PHP and paired with MySQL or MariaDB as its backend Relational Database Management System (RDBMS)
 
 This project consists of two parts:
 
-- Configuring storage subsystem for web and database servers based on Red Hat Enterprise Linux (RHEL) 8 HVM.
+- Configuring a storage subsystem for web and database servers based on Red Hat Enterprise Linux (RHEL) 8 HVM.
 
 - Installing WordPress and connecting it to a remote MySQL database server.
-----------
+
+-----------
+    Happy learning!
 
 ## Preparing your Web Server and Creating its Volumes
 
@@ -65,7 +65,7 @@ After that, we need to run `df -h` to see all mounts available and free space on
 
 ![mounts-available](./images/mounts-available.png)
 
-## Creating Partitions for our Block Devices
+## Creating Partitions for your Block Devices
 
 We will use `sudo gdisk` to create a partition on each of the 3 disks
 
