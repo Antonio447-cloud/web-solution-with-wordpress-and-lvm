@@ -317,7 +317,7 @@ We verify our setup one more time to make sure everything looks good:
 
 ![df-db](./images/df-db.png)
 
-## Installing WordPress on our Web Server EC2
+## Installing WordPress on your Web Server EC2
 
 We update our repository:
 
