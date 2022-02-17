@@ -509,4 +509,4 @@ And we now log in!
 
 ![login](./images/login.png)
 
-Congrats!! You have just configured a storage subsystem for web and database servers based on Red Hat Enterprise Linux (RHEL) 8 HVM, installed WordPress and connected it to a remote MySQL database server!
+Congrats!! You have just configured a storage subsystem for web and database servers based on RHEL, installed WordPress and connected it to a remote MySQL database server!
