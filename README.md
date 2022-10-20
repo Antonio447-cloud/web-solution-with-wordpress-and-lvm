@@ -1,6 +1,6 @@
 # Web Solution with WordPress
 
-*Demonstration of how to prepare a storage infrastructure on three Linux servers and implement a basic web solution using WordPress. The source code used on this project was retrieved from darey.io.* 
+*Demonstration of how to prepare a storage infrastructure on three Linux servers and implement a basic web solution using WordPress.* 
 
 *Instructions on how to launch and connect to your EC2 instance using an SSH client:*
  
